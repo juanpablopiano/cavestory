@@ -45,3 +45,4 @@ cavestory.*
 /.project
 /Debug/
 /.DS_Store
+*.AppImage

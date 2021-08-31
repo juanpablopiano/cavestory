@@ -46,3 +46,4 @@ cavestory.*
 /Debug/
 /.DS_Store
 *.AppImage
+level_2.cpp

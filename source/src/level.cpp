@@ -181,6 +181,24 @@ void Level::loadMap(std::string mapName, Graphics &graphics) {
 				}
 			}
 			// Other objectgroups go here with an else if (ss.str() == whatever)
+			else if (ss.str() == "spawn points") {
+				XMLElement* pObject = pObjectGroup->FirstChildElement("object");
+				if (pObject != NULL) {
+					while (pObject) {
+						float x = pObject->FloatAttribute("x");
+						float y = pObject->FloatAttribute("y");
+						const char* name = pObject->Attribute("name");
+						std::stringstream ss;
+						ss << name;
+						if (ss.str() == "player") {
+							this->_spawnPoint = Vector2(std::ceil(x) * globals::SPRITE_SCALE,
+								std::ceil(y) * globals::SPRITE_SCALE);
+						}
+
+						pObject = pObject->NextSiblingElement("object");
+					}
+				}
+			}
 
 			pObjectGroup = pObjectGroup->NextSiblingElement("objectgroup");
 		}
@@ -206,4 +224,8 @@ std::vector<Rectangle> Level::checkTileCollisions(const Rectangle &other) {
 		}
 	}
 	return others;
+}
+
+const Vector2 Level::getPlayerSpawnPoint() const {
+	return this->_spawnPoint;
 }

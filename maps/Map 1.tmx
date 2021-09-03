@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="20" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="64">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="20" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="64">
  <tileset firstgid="1" name="PrtCave" tilewidth="16" tileheight="16" tilecount="80" columns="16">
   <image source="../content/tilesets/PrtCave.png" width="256" height="80"/>
  </tileset>
@@ -651,23 +651,23 @@
    <tile/>
   </data>
  </layer>
- <objectgroup id="5" name="collisions">
-  <object id="40" x="144" y="16" width="16" height="16"/>
-  <object id="45" x="112" y="80" width="80" height="16"/>
-  <object id="50" x="128" y="144" width="47.125" height="16"/>
-  <object id="51" x="193" y="144" width="15" height="16"/>
-  <object id="52" x="208" y="128" width="32" height="16"/>
-  <object id="53" x="144" y="64" width="16" height="16"/>
-  <object id="55" x="74.75" y="38.75" width="6" height="99.75"/>
-  <object id="56" x="72.5" y="125.5" width="39.75" height="13.25"/>
-  <object id="57" x="107" y="125.75" width="5.25" height="60"/>
-  <object id="58" x="174.5" y="21.5" width="7.5" height="39.75"/>
-  <object id="60" x="239" y="91.75" width="12.75" height="43"/>
-  <object id="61" x="112.25" y="185.75" width="96.25" height="5"/>
-  <object id="62" x="206.25" y="160.75" width="6.25" height="25.5"/>
+ <objectgroup id="7" name="collisions">
+  <object id="1" x="144" y="16" width="16" height="16"/>
+  <object id="2" x="144" y="64" width="16" height="16"/>
+  <object id="3" x="112" y="80" width="80" height="16"/>
+  <object id="4" x="58.2308" y="28.0594" width="23.5337" height="107.41"/>
+  <object id="5" x="53.4033" y="125.513" width="60.041" height="16.5943"/>
+  <object id="6" x="107.41" y="126.116" width="6.03427" height="58.2308"/>
+  <object id="7" x="128" y="144" width="48" height="16"/>
+  <object id="8" x="192" y="144" width="16" height="16"/>
+  <object id="9" x="208" y="128" width="32" height="16"/>
+  <object id="11" x="174.089" y="25.6457" width="12.0685" height="37.7142"/>
+  <object id="14" x="238.052" y="98.6604" width="11.4651" height="32.2834"/>
+  <object id="15" x="114.35" y="185.252" width="93.833" height="13.2754"/>
+  <object id="16" x="206.372" y="161.719" width="7.84456" height="25.6457"/>
  </objectgroup>
- <objectgroup color="#00ff00" id="6" name="spawn points">
-  <object id="63" x="160.352" y="136.852" width="1.625" height="1.875">
+ <objectgroup color="#00ff00" id="8" name="spawn points">
+  <object id="17" name="player" x="158.337" y="136.764" width="2.57298" height="2.77091">
    <ellipse/>
   </object>
  </objectgroup>

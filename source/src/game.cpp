@@ -27,7 +27,7 @@ void Game::gameLoop() {
     Input input;
     SDL_Event event;
 
-    this->_player = Player(graphics, 100, 100);
+    this->_player = Player(graphics, 280, 252);
     this->_level = Level("Map 1", Vector2(100, 100), graphics);
     
 
@@ -84,4 +84,11 @@ void Game::draw(Graphics &graphics) {
 void Game::update(float elapsedtime) {
     this->_player.update(elapsedtime);
     this->_level.update(elapsedtime);
+
+    // Check collisions
+    std::vector<Rectangle> others;
+    if ((others = this->_level.checkTileCollisions(this->_player.getBoundingBox())).size() > 0) {
+        // Player collided with at least one tile. Handle it.
+        this->_player.handleTileCollisions(others);
+    }
 }

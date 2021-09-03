@@ -36,7 +36,7 @@ public:
 
     // bool collidesWith
     // Takes in another rectangle and checks if the two are colliding
-    const bool collidesWidth(const Rectangle &other) const {
+    const bool collidesWith(const Rectangle &other) const {
         return
             this->getRight() >= other.getLeft() &&
             this->getLeft() <= other.getRight() &&

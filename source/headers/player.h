@@ -32,10 +32,15 @@ public:
 
     virtual void animationDone(std::string currentAnimation);
     virtual void setupAnimations();
+
+    const float getX() const;
+    const float getY() const;
 private:
     float _dx, _dy;
 
     Direction _facing;
+
+    bool _grounded;
 };
 
 #endif
